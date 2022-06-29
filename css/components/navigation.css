@@ -1,0 +1,6 @@
+nav {
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--brand-color);
+}
