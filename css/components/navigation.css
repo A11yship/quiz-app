@@ -1,9 +1,16 @@
 nav {
   height: 50px;
+  width: 100%;
   position: fixed;
   bottom: 0;
   background-color: var(--brand-color);
+}
 
+.nav_list {
+  height: 50px;
+  list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
