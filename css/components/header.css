@@ -7,4 +7,5 @@ h1 {
   color: var(--light-color);
   text-align: center;
   padding: 5px 0;
+  text-shadow: 3px 3px 1px var(--dark-color);
 }
