@@ -1,3 +1,7 @@
 @import url(./create.css);
 @import url(./profil.css);
 @import url(./question-card.css);
+
+main {
+  margin-bottom: 60px;
+}
