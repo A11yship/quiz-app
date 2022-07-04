@@ -28,3 +28,7 @@ nav {
   text-align: center;
   padding: 11px 0;
 }
+
+.nav_list__item--current {
+  background-color: var(--dark-accent);
+}
