@@ -17,12 +17,10 @@
 .card_bookmark {
   height: 50px;
   width: 50px;
-  border: 0;
   background-color: var(--light-color);
   position: absolute;
-  top: -20px;
+  top: -15px;
   right: 15px;
-  display: flex;
 }
 
 .card_answer {
