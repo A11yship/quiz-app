@@ -9,7 +9,38 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header><h1>Fragen erstellen</h1></header>
+    <header>
+      <h1>Fragen erstellen</h1>
+    </header>
+    <main>
+      <form action="">
+        <label for="question">Bitte gibt deine neue Frage ein:</label>
+        <textarea
+          name="question"
+          id="question"
+          cols="40"
+          rows="5"
+          placeholder="Fragetext."
+        ></textarea>
+        <label for="answer">Bitte gibt die Antwort zu deiner Frage ein:</label>
+        <textarea
+          name="answer"
+          id="answer"
+          cols="40"
+          rows="5"
+          placeholder="Antworttext."
+        ></textarea>
+        <label for="tags"
+          >Gibt hier die Kategorien zur Frage ein, mit Komma trennen</label
+        >
+        <input
+          type="text"
+          id="tags"
+          placeholder="Kategorie1, Kategorie2, ..."
+        />
+        <button>Speichern</button>
+      </form>
+    </main>
 
     <nav>
       <ul class="nav_list">
