@@ -4,18 +4,20 @@
   padding: 0;
 }
 
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-}
-
 :root {
   --light-color: #f8f7f6;
   --light-accent: #889bc9;
   --brand-color: #6762d7;
   --dark-accent: #795899;
   --dark-color: #282c6c;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--dark-color);
+  background-color: var(--light-color);
 }
