@@ -14,3 +14,18 @@ main {
   border-radius: 5px;
   font-weight: bold;
 }
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tag-item {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--dark-accent);
+  color: var(--light-color);
+}
