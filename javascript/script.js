@@ -1,2 +1,10 @@
 console.clear();
-console.log("Hello World!");
+
+const bookmarkButton = document.querySelector('[data-js="bookmark-button"]');
+const emptyBookmark = document.querySelector('[data-js="bookmark-img-empty"]');
+const fullBookmark = document.querySelector('[data-js="bookmark-img-full"]');
+
+bookmarkButton.addEventListener("click", () => {
+  emptyBookmark.classList.toggle("card_bookmark__img--hidden");
+  fullBookmark.classList.toggle("card_bookmark__img--hidden");
+});
