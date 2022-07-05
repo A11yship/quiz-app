@@ -44,18 +44,3 @@
 .card_answer--hidden {
   display: none;
 }
-
-.card_tags {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.card_tags_tag {
-  padding: 5px;
-  border-radius: 5px;
-  background-color: var(--dark-accent);
-  color: var(--light-color);
-}

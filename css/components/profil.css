@@ -1,0 +1,34 @@
+.profile__section {
+  padding: 0 20px;
+}
+
+.profile__pic-name {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile__pic {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  padding: 3px;
+  border: 5px solid var(--brand-color);
+}
+
+.profile__name {
+  justify-self: center;
+  color: var(--brand-color);
+  font-size: 3.5rem;
+}
+
+.profile__skill-headline {
+  color: var(--dark-accent);
+  margin: 10px 0;
+}
+
+.profile__logout-button {
+  margin: 20px 0 10px 50%;
+  transform: translate(-50%);
+}
