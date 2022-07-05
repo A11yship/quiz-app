@@ -35,6 +35,13 @@
 }
 
 .card_answer {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid var(--brand-color);
+  border-radius: 20px;
+}
+
+.card_answer--hidden {
   display: none;
 }
 
