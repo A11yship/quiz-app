@@ -23,7 +23,12 @@
   font-size: 3.5rem;
 }
 
+.profile__skill-headline {
+  color: var(--dark-accent);
+  margin: 10px 0;
+}
+
 .profile__logout-button {
-  margin-left: 50%;
+  margin: 20px 0 10px 50%;
   transform: translate(-50%);
 }
