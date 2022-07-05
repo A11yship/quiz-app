@@ -14,16 +14,23 @@
   margin: 0 0 10px 0;
 }
 
-.card_bookmark {
+.card_bookmark__button {
   height: 50px;
   width: 50px;
-  background-color: var(--light-color);
+  border: 0;
   position: absolute;
   top: -15px;
   right: 15px;
+  background-color: transparent;
 }
 
-.card_bookmark--hidden {
+.card_bookmark__img {
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-color);
+}
+
+.card_bookmark__img--hidden {
   display: none;
 }
 
