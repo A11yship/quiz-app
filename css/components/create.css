@@ -5,3 +5,7 @@
   align-items: flex-start;
   gap: 10px;
 }
+
+.create__button {
+  align-self: center;
+}
