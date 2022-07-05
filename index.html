@@ -17,14 +17,57 @@
     <main>
       <article class="card">
         <h2 class="card_headline">Frage</h2>
-        <button type="button">
+        <button
+          type="button"
+          class="card_bookmark__button"
+          data-js="bookmark-button"
+        >
           <img
-            class="card_bookmark card_bookmark--hidden"
+            class="card_bookmark__img card_bookmark__img--hidden"
+            data-js="bookmark-img-empty"
             src="./icons/bookmark_border_black_24dp.svg"
             alt="kein Lesezeichen"
           />
           <img
-            class="card_bookmark"
+            class="card_bookmark__img"
+            data-js="bookmark-img-full"
+            src="./icons/bookmark_black_24dp.svg"
+            alt="Lesezeichen"
+          />
+        </button>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad libero hic
+          aliquid veritatis quisquam dignissimos reprehenderit
+        </p>
+        <button type="button" class="regular-button" data-js="button-answer">
+          Zeige Antwort
+        </button>
+        <p class="card_answer card_answer--hidden" data-js="answer">
+
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. A voluptas
+          quisquam voluptatem magnam saepe veniam ipsa vel sed quaerat eaque
+          nostrum ab iusto placeat nihil fugit adipisci, repellendus illo aut?
+        </p>
+        <ul class="card_tags">
+          <!-- Tags sind Buttons, die filtern können -->
+          <li class="card_tags_tag">asd</li>
+          <li class="card_tags_tag">sdf</li>
+          <li class="card_tags_tag">wer</li>
+          <li class="card_tags_tag">ghf</li>
+          <li class="card_tags_tag">hjkk</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2 class="card_headline">Frage</h2>
+        <button type="button" class="card_bookmark__button">
+          <img
+            class="card_bookmark__img"
+            src="./icons/bookmark_border_black_24dp.svg"
+            alt="kein Lesezeichen"
+          />
+          <img
+            class="card_bookmark__img card_bookmark__img--hidden"
             src="./icons/bookmark_black_24dp.svg"
             alt="Lesezeichen"
           />
@@ -51,48 +94,14 @@
 
       <article class="card">
         <h2 class="card_headline">Frage</h2>
-        <button type="button">
+        <button type="button" class="card_bookmark__button">
           <img
-            class="card_bookmark"
+            class="card_bookmark__img card_bookmark__img--hidden"
             src="./icons/bookmark_border_black_24dp.svg"
             alt="kein Lesezeichen"
           />
           <img
-            class="card_bookmark card_bookmark--hidden"
-            src="./icons/bookmark_black_24dp.svg"
-            alt="Lesezeichen"
-          />
-        </button>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad libero hic
-          aliquid veritatis quisquam dignissimos reprehenderit
-        </p>
-        <button type="button" class="regular-button">Zeige Antwort</button>
-        <p class="card_answer">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. A voluptas
-          quisquam voluptatem magnam saepe veniam ipsa vel sed quaerat eaque
-          nostrum ab iusto placeat nihil fugit adipisci, repellendus illo aut?
-        </p>
-        <ul class="card_tags">
-          <!-- Tags sind Buttons, die filtern können -->
-          <li class="card_tags_tag">asd</li>
-          <li class="card_tags_tag">sdf</li>
-          <li class="card_tags_tag">wer</li>
-          <li class="card_tags_tag">ghf</li>
-          <li class="card_tags_tag">hjkk</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2 class="card_headline">Frage</h2>
-        <button type="button">
-          <img
-            class="card_bookmark card_bookmark--hidden"
-            src="./icons/bookmark_border_black_24dp.svg"
-            alt="kein Lesezeichen"
-          />
-          <img
-            class="card_bookmark"
+            class="card_bookmark__img"
             src="./icons/bookmark_black_24dp.svg"
             alt="Lesezeichen"
           />
