@@ -22,3 +22,8 @@
   color: var(--brand-color);
   font-size: 3.5rem;
 }
+
+.profile__logout-button {
+  margin-left: 50%;
+  transform: translate(-50%);
+}
