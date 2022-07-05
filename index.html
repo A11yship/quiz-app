@@ -17,14 +17,20 @@
     <main>
       <article class="card">
         <h2 class="card_headline">Frage</h2>
-        <button type="button" class="card_bookmark__button">
+        <button
+          type="button"
+          class="card_bookmark__button"
+          data-js="bookmark-button"
+        >
           <img
             class="card_bookmark__img card_bookmark__img--hidden"
+            data-js="bookmark-img-empty"
             src="./icons/bookmark_border_black_24dp.svg"
             alt="kein Lesezeichen"
           />
           <img
             class="card_bookmark__img"
+            data-js="bookmark-img-full"
             src="./icons/bookmark_black_24dp.svg"
             alt="Lesezeichen"
           />
