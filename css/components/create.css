@@ -6,6 +6,18 @@
   gap: 10px;
 }
 
+.create-inputs {
+  padding: 3px;
+  border-radius: 5px;
+  border: 2px solid var(--dark-accent);
+}
+
+.create-inputs::placeholder {
+  color: var(--light-accent);
+  font-family: sans-serif;
+  font-size: 1.3rem;
+}
+
 .create__button {
   align-self: center;
 }
