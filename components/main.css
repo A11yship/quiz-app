@@ -1,6 +1,6 @@
 @import url(./create.css);
 @import url(./profil.css);
-@import url(./card.css);
+@import url(./card/card.css);
 
 main {
   margin: 70px 0;
