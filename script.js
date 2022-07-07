@@ -1,15 +1,9 @@
+import Bookmark from "./components/bookmark/bookmark.js";
 console.clear();
 
 //Change the bookmark status
 
-const bookmarkButton = document.querySelector('[data-js="bookmark-button"]');
-const emptyBookmark = document.querySelector('[data-js="bookmark-img-empty"]');
-const fullBookmark = document.querySelector('[data-js="bookmark-img-full"]');
-
-bookmarkButton.addEventListener("click", () => {
-  emptyBookmark.classList.toggle("card_bookmark__img--hidden");
-  fullBookmark.classList.toggle("card_bookmark__img--hidden");
-});
+Bookmark();
 
 //Hidde/show answer
 
