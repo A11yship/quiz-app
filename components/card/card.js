@@ -24,6 +24,29 @@ export default function Card() {
     card.classList.add("card");
     main.append(card);
 
-    console.log("Ich bin eine Karte");
+    const headline = document.createElement("h2");
+    headline.innerText = "Frage";
+    headline.classList.add("card_headline");
+    card.append(headline);
+
+    const bookmark = document.createElement("button");
+    bookmark.classList.add("bookmark__button");
+    bookmark.type = "button";
+    bookmark.setAttribute("data-js", "bookmark-button");
+    card.append(bookmark);
+
+    const bookmarkImgEmpty = document.createElement("img");
+    bookmarkImgEmpty.classList.add("bookmark__img");
+    bookmarkImgEmpty.src = "../../icons/bookmark_border_black_24dp.svg";
+    bookmarkImgEmpty.setAttribute("data-js", "bookmark-img-empty");
+    bookmarkImgEmpty.alt = "Lesezeichen nicht gesetzt";
+    bookmark.append(bookmarkImgEmpty);
+
+    const bookmarkImgFull = document.createElement("img");
+    bookmarkImgFull.classList.add("bookmark__img", "bookmark__img--hidden");
+    bookmarkImgFull.src = "../../icons/bookmark_black_24dp.svg";
+    bookmarkImgFull.setAttribute("data-js", "bookmark-img-full");
+    bookmarkImgFull.alt = "Lesezeichen nicht gesetzt";
+    bookmark.append(bookmarkImgFull);
   });
 }
