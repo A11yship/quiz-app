@@ -1,4 +1,4 @@
-export default function Card() {
+export default function Answer() {
   const answerButton = document.querySelector('[data-js="button-answer"]');
   const answer = document.querySelector('[data-js="answer"]');
 
