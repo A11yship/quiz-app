@@ -12,8 +12,10 @@ export default function Bookmark() {
 
       if (isBookmarked) {
         bookmark.classList.add("bookmark__svg--filled");
+        bookmark.setAttribute("alt", "Lesezeichen gesetzt");
       } else {
         bookmark.classList.remove("bookmark__svg--filled");
+        bookmark.setAttribute("alt", "Lesezeichen nicht gesetzt");
       }
     });
   });
