@@ -35,19 +35,25 @@ export default function Card() {
     bookmark.setAttribute("data-js", "bookmark-button");
     card.append(bookmark);
 
-    const bookmarkImgEmpty = document.createElement("img");
-    bookmarkImgEmpty.classList.add("bookmark__img");
-    bookmarkImgEmpty.src = "../../icons/bookmark_border_black_24dp.svg";
-    bookmarkImgEmpty.setAttribute("data-js", "bookmark-img-empty");
-    bookmarkImgEmpty.alt = "Lesezeichen nicht gesetzt";
-    bookmark.append(bookmarkImgEmpty);
+    const bookmarkSVG = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "svg"
+    );
+    bookmarkSVG.classList.add("bookmark__svg");
+    bookmarkSVG.setAttribute("data-js", "bookmark-svg");
+    bookmarkSVG.setAttribute("viewBox", "-2 -2 28 28");
+    bookmarkSVG.alt = "Lesezeichen nicht gesetzt";
+    bookmark.append(bookmarkSVG);
 
-    const bookmarkImgFull = document.createElement("img");
-    bookmarkImgFull.classList.add("bookmark__img", "bookmark__img--hidden");
-    bookmarkImgFull.src = "../../icons/bookmark_black_24dp.svg";
-    bookmarkImgFull.setAttribute("data-js", "bookmark-img-full");
-    bookmarkImgFull.alt = "Lesezeichen gesetzt";
-    bookmark.append(bookmarkImgFull);
+    const bookmarkPath = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "path"
+    );
+    bookmarkPath.setAttribute(
+      "d",
+      "M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
+    );
+    bookmarkSVG.append(bookmarkPath);
 
     const questionText = document.createElement("p");
     questionText.innerText = question.question;
