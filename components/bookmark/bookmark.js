@@ -1,12 +1,20 @@
 export default function Bookmark() {
-  const bookmarkButton = document.querySelector('[data-js="bookmark-button"]');
-  const emptyBookmark = document.querySelector(
-    '[data-js="bookmark-img-empty"]'
+  const bookmarkButtons = document.querySelectorAll(
+    '[data-js="bookmark-button"]'
   );
-  const fullBookmark = document.querySelector('[data-js="bookmark-img-full"]');
 
-  bookmarkButton.addEventListener("click", () => {
-    emptyBookmark.classList.toggle("bookmark__img--hidden");
-    fullBookmark.classList.toggle("bookmark__img--hidden");
+  bookmarkButtons.forEach((button) => {
+    const bookmark = button.querySelector('[data-js="bookmark-svg"]');
+    let isBookmarked = false;
+
+    button.addEventListener("click", () => {
+      isBookmarked = !isBookmarked;
+
+      if (isBookmarked) {
+        bookmark.classList.add("bookmark__svg--filled");
+      } else {
+        bookmark.classList.remove("bookmark__svg--filled");
+      }
+    });
   });
 }
