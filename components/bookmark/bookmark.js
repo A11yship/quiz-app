@@ -4,21 +4,16 @@ export default function Bookmark() {
   );
 
   bookmarkButtons.forEach((button) => {
-    const emptyBookmark = button.querySelector(
-      '[data-js="bookmark-img-empty"]'
-    );
-    const fullBookmark = button.querySelector('[data-js="bookmark-img-full"]');
+    const bookmark = button.querySelector('[data-js="bookmark-svg"]');
     let isBookmarked = false;
 
     button.addEventListener("click", () => {
       isBookmarked = !isBookmarked;
 
       if (isBookmarked) {
-        emptyBookmark.classList.add("bookmark__img--hidden");
-        fullBookmark.classList.remove("bookmark__img--hidden");
+        bookmark.classList.add("bookmark__svg--filled");
       } else {
-        emptyBookmark.classList.remove("bookmark__img--hidden");
-        fullBookmark.classList.add("bookmark__img--hidden");
+        bookmark.classList.remove("bookmark__svg--filled");
       }
     });
   });
