@@ -1,15 +1,22 @@
 export default function Answer() {
-  const card = document.querySelectorAll('[data-js="card"]');
+  const cards = document.querySelectorAll('[data-js="card"]');
 
-  const answerButton = document.querySelector('[data-js="button-answer"]');
-  const answer = document.querySelector('[data-js="answer"]');
+  cards.forEach((card) => {
+    const answerButton = card.querySelector('[data-js="button-answer"]');
+    const answer = card.querySelector('[data-js="answer"]');
 
-  answerButton.addEventListener("click", () => {
-    answer.classList.toggle("card_answer--hidden");
-    if (answerButton.textContent.trim() == "Verberge Antwort") {
-      answerButton.textContent = "Zeige Antwort";
-    } else if (answerButton.textContent.trim() == "Zeige Antwort") {
-      answerButton.textContent = "Verberge Antwort";
-    }
+    let showAnswer = false;
+
+    answerButton.addEventListener("click", () => {
+      showAnswer = !showAnswer;
+
+      if (showAnswer) {
+        answerButton.innerText = "Verberge Antwort";
+        answer.classList.remove("card_answer--hidden");
+      } else {
+        answerButton.innerText = "Zeige Antwort";
+        answer.classList.add("card_answer--hidden");
+      }
+    });
   });
 }
