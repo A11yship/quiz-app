@@ -42,7 +42,7 @@ export default function Card() {
     bookmarkSVG.classList.add("bookmark__svg");
     bookmarkSVG.setAttribute("data-js", "bookmark-svg");
     bookmarkSVG.setAttribute("viewBox", "-2 -2 28 28");
-    bookmarkSVG.alt = "Lesezeichen nicht gesetzt";
+    bookmarkSVG.setAttribute("alt", "Lesezeichen nicht gesetzt");
     bookmark.append(bookmarkSVG);
 
     const bookmarkPath = document.createElementNS(
