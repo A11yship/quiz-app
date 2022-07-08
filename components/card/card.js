@@ -1,4 +1,4 @@
-const cards = [
+const questions = [
   {
     question: "Wie heißt die Hauptstadt von Deutschland?",
     answer: "Berlin",
@@ -16,6 +16,14 @@ const cards = [
   },
 ];
 
+const main = document.querySelector("main");
+
 export default function Card() {
-  console.log("I will generate Cards.");
+  questions.forEach((question) => {
+    const card = document.createElement("article");
+    card.classList.add("card");
+    main.append(card);
+
+    console.log("Ich bin eine Karte");
+  });
 }
