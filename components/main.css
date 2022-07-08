@@ -1,0 +1,9 @@
+@import url(./button/button.css);
+@import url(./tag-list/tag-list.css);
+@import url(./create/create.css);
+@import url(./profile/profile.css);
+@import url(./card/card.css);
+
+main {
+  margin: 70px 0;
+}
