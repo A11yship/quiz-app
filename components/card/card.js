@@ -46,7 +46,7 @@ export default function Card() {
     bookmarkImgFull.classList.add("bookmark__img", "bookmark__img--hidden");
     bookmarkImgFull.src = "../../icons/bookmark_black_24dp.svg";
     bookmarkImgFull.setAttribute("data-js", "bookmark-img-full");
-    bookmarkImgFull.alt = "Lesezeichen nicht gesetzt";
+    bookmarkImgFull.alt = "Lesezeichen gesetzt";
     bookmark.append(bookmarkImgFull);
 
     const questionText = document.createElement("p");
