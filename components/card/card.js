@@ -22,6 +22,7 @@ export default function Card() {
   questions.forEach((question) => {
     const card = document.createElement("article");
     card.classList.add("card");
+    card.setAttribute("data-js", "card");
     main.append(card);
 
     const headline = document.createElement("h2");
