@@ -53,10 +53,28 @@ export default function Card() {
     questionText.innerText = question.question;
     card.append(questionText);
 
+    const answerButton = document.createElement("button");
+    answerButton.classList.add("regular-button");
+    answerButton.innerText = "Zeige Antwort";
+    answerButton.type = "button";
+    answerButton.setAttribute("data-js", "button-answer");
+    card.append(answerButton);
+
     const answerText = document.createElement("p");
     answerText.innerText = question.answer;
     answerText.classList.add("card_answer", "card_answer--hidden");
     answerText.setAttribute("data-js", "answer");
     card.append(answerText);
+
+    const tagList = document.createElement("ul");
+    tagList.classList.add("tag-list");
+    card.append(tagList);
+
+    question.tags.forEach((tag) => {
+      const tagItem = document.createElement("li");
+      tagItem.innerText = tag;
+      tagItem.classList.add("tag-item");
+      tagList.append(tagItem);
+    });
   });
 }
