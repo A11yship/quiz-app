@@ -48,5 +48,15 @@ export default function Card() {
     bookmarkImgFull.setAttribute("data-js", "bookmark-img-full");
     bookmarkImgFull.alt = "Lesezeichen nicht gesetzt";
     bookmark.append(bookmarkImgFull);
+
+    const questionText = document.createElement("p");
+    questionText.innerText = question.question;
+    card.append(questionText);
+
+    const answerText = document.createElement("p");
+    answerText.innerText = question.answer;
+    answerText.classList.add("card_answer", "card_answer--hidden");
+    answerText.setAttribute("data-js", "answer");
+    card.append(answerText);
   });
 }
