@@ -8,10 +8,18 @@ export default function Bookmark() {
       '[data-js="bookmark-img-empty"]'
     );
     const fullBookmark = button.querySelector('[data-js="bookmark-img-full"]');
+    let isBookmarked = false;
 
     button.addEventListener("click", () => {
-      emptyBookmark.classList.toggle("bookmark__img--hidden");
-      fullBookmark.classList.toggle("bookmark__img--hidden");
+      isBookmarked = !isBookmarked;
+
+      if (isBookmarked) {
+        emptyBookmark.classList.add("bookmark__img--hidden");
+        fullBookmark.classList.remove("bookmark__img--hidden");
+      } else {
+        emptyBookmark.classList.remove("bookmark__img--hidden");
+        fullBookmark.classList.add("bookmark__img--hidden");
+      }
     });
   });
 }
