@@ -52,10 +52,10 @@
       </div>
 
       <!-- Bookmarke page -->
-      <div class="page"></div>
+      <div class="page" data-js="bookmark-page"></div>
 
       <!-- Create page -->
-      <div class="page">
+      <div class="page" data-js="create-page">
         <form action="" class="formular">
           <label for="question">Bitte gibt deine neue Frage ein:</label>
           <textarea
@@ -92,7 +92,7 @@
       </div>
 
       <!-- Profile page -->
-      <div class="page profile__section">
+      <div class="page profile__section" data-js="profile-page">
         <div class="profile__pic-name">
           <img
             class="profile__pic"
@@ -127,12 +127,12 @@
     <nav>
       <ul class="nav_list">
         <li class="nav_list__item nav_list__item--current">
-          <button class="nav_list__item__link">
+          <button class="nav_list__item__link" data-js="nav-button-home">
             <img src="./icons/home_black_24dp.svg" alt="Startseite" />
           </button>
         </li>
         <li class="nav_list__item">
-          <button class="nav_list__item__link">
+          <button class="nav_list__item__link" data-js="nav-button-bookmark">
             <img
               src="./icons/bookmark_border_black_24dp.svg"
               alt="Lesezeichen"
@@ -140,12 +140,12 @@
           </button>
         </li>
         <li class="nav_list__item">
-          <button class="nav_list__item__link">
+          <button class="nav_list__item__link" data-js="nav-button-create">
             <img src="./icons/post_add_black_24dp.svg" alt="Frage hinzufügen" />
           </button>
         </li>
         <li class="nav_list__item">
-          <button class="nav_list__item__link">
+          <button class="nav_list__item__link" data-js="nav-button-profile">
             <img src="./icons/person_outline_black_24dp.svg" alt="Profil" />
           </button>
         </li>
