@@ -8,7 +8,7 @@ export default function Nav() {
     '[data-js="nav-button-profile"]'
   );
 
-  const homePage = document.querySelector('[data-js="mainpage"]');
+  const homePage = document.querySelector('[data-js="home-page"]');
   const bookmarkPage = document.querySelector('[data-js="bookmark-page"]');
   const createPage = document.querySelector('[data-js="create-page"]');
   const profilePage = document.querySelector('[data-js="profile-page"]');

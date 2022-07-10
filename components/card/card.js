@@ -16,7 +16,7 @@ const questions = [
   },
 ];
 
-const maindiv = document.querySelector('[data-js="mainpage"]');
+const maindiv = document.querySelector('[data-js="home-page"]');
 
 export default function Card() {
   questions.forEach((question) => {
