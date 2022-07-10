@@ -13,6 +13,8 @@ export default function Nav() {
   const createPage = document.querySelector('[data-js="create-page"]');
   const profilePage = document.querySelector('[data-js="profile-page"]');
 
+  const headline = document.querySelector('[data-js="headline"]');
+
   const buttons = [homeButton, bookmarkButton, createButton, profileButton];
   const pages = [homePage, bookmarkPage, createPage, profilePage];
 
@@ -23,12 +25,16 @@ export default function Nav() {
       });
       if (button == homeButton) {
         homePage.classList.remove("page");
+        headline.innerText = "Quiz-App";
       } else if (button == bookmarkButton) {
         bookmarkPage.classList.remove("page");
+        headline.innerText = "Lesezeichen";
       } else if (button == createButton) {
         createPage.classList.remove("page");
+        headline.innerText = "Fragen erstellen";
       } else {
         profilePage.classList.remove("page");
+        headline.innerText = "Profil";
       }
     });
   });
