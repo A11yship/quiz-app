@@ -23,6 +23,10 @@ export default function Nav() {
       pages.forEach((page) => {
         page.classList.add("page");
       });
+      buttons.forEach((button) => {
+        button.classList.remove("nav_list__item__button--current");
+      });
+      button.classList.add("nav_list__item__button--current");
       if (button == homeButton) {
         homePage.classList.remove("page");
         headline.innerText = "Quiz-App";
