@@ -4,7 +4,6 @@ nav {
   position: fixed;
   bottom: 0;
   z-index: 1;
-  background-color: var(--brand-color);
 }
 
 .nav_list {
@@ -22,15 +21,15 @@ nav {
   border: 2px solid var(--dark-color);
 }
 
-.nav_list__item__link {
+.nav_list__item__button {
   display: block;
   height: 100%;
   width: 100%;
   text-align: center;
   padding: 11px 0;
-  background-color: transparent;
+  background-color: var(--brand-color);
 }
 
-.nav_list__item--current {
+.nav_list__item__button--current {
   background-color: var(--dark-accent);
 }
