@@ -15,38 +15,107 @@
     </header>
 
     <main>
-      <article class="card" data-js="card">
-        <h2 class="card_headline">Frage</h2>
-        <button
-          type="button"
-          class="bookmark__button"
-          data-js="bookmark-button"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="bookmark__svg"
-            viewBox="-2 -2 28 28"
-            data-js="bookmark-svg"
+      <div>
+        <article class="card" data-js="card">
+          <h2 class="card_headline">Frage</h2>
+          <button
+            type="button"
+            class="bookmark__button"
+            data-js="bookmark-button"
           >
-            <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
-          </svg>
-        </button>
-        <p>Ich bin hardcoded zum Testen und als Beispiel.</p>
-        <button type="button" class="regular-button" data-js="button-answer">
-          Zeige Antwort
-        </button>
-        <p class="card_answer card_answer--hidden" data-js="answer">
-          Ich bin eine Beispielantwort.
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="bookmark__svg"
+              viewBox="-2 -2 28 28"
+              data-js="bookmark-svg"
+            >
+              <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" />
+            </svg>
+          </button>
+          <p>Ich bin hardcoded zum Testen und als Beispiel.</p>
+          <button type="button" class="regular-button" data-js="button-answer">
+            Zeige Antwort
+          </button>
+          <p class="card_answer card_answer--hidden" data-js="answer">
+            Ich bin eine Beispielantwort.
+          </p>
+          <ul class="tag-list">
+            <!-- Tags sind Buttons, die filtern können -->
+            <li class="tag-item">asd</li>
+            <li class="tag-item">sdf</li>
+            <li class="tag-item">wer</li>
+            <li class="tag-item">ghf</li>
+            <li class="tag-item">hjkk</li>
+          </ul>
+        </article>
+      </div>
+
+      <div>
+        <form action="" class="formular">
+          <label for="question">Bitte gibt deine neue Frage ein:</label>
+          <textarea
+            class="create-inputs"
+            name="question"
+            id="question"
+            cols="35"
+            rows="5"
+            placeholder="Fragetext"
+          ></textarea>
+          <label for="answer"
+            >Bitte gibt die Antwort zu deiner Frage ein:</label
+          >
+          <textarea
+            class="create-inputs"
+            name="answer"
+            id="answer"
+            cols="35"
+            rows="5"
+            placeholder="Antworttext"
+          ></textarea>
+          <label for="tags"
+            >Gibt hier die Kategorien zur Frage ein, mit Komma trennen</label
+          >
+          <input
+            class="create-inputs"
+            type="text"
+            name="tags"
+            id="tags"
+            placeholder="Kategorie1, Kategorie2,..."
+          />
+          <button class="regular-button create__button">Speichern</button>
+        </form>
+      </div>
+
+      <div class="profile__section">
+        <div class="profile__pic-name">
+          <img
+            class="profile__pic"
+            src="./icons/aarn-giri-3tYZjGSBwbk-unsplash.jpg"
+            alt="Profilbild"
+          />
+          <h2 class="profile__name">Daisy</h2>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quis
+          libero consequatur, ipsa odit magni eos dolore dolor suscipit
+          architecto culpa officiis incidunt asperiores repudiandae itaque earum
+          unde cumque obcaecati!
         </p>
+        <h3 class="profile__skill-headline">Skills</h3>
         <ul class="tag-list">
-          <!-- Tags sind Buttons, die filtern können -->
-          <li class="tag-item">asd</li>
-          <li class="tag-item">sdf</li>
-          <li class="tag-item">wer</li>
-          <li class="tag-item">ghf</li>
-          <li class="tag-item">hjkk</li>
+          <li class="tag-item">Allgemeinwissen</li>
+          <li class="tag-item">Logik</li>
+          <li class="tag-item">Essen</li>
+          <li class="tag-item">Natur</li>
+          <li class="tag-item">sadf</li>
+          <li class="tag-item">upoi</li>
+          <li class="tag-item">euroif</li>
+          <li class="tag-item">ädjfha</li>
         </ul>
-      </article>
+        <button class="profile__logout-button regular-button" type="button">
+          LOGOUT
+        </button>
+      </div>
     </main>
 
     <nav>
