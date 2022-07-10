@@ -28,6 +28,7 @@ nav {
   width: 100%;
   text-align: center;
   padding: 11px 0;
+  background-color: transparent;
 }
 
 .nav_list__item--current {
