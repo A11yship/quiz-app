@@ -11,22 +11,17 @@ nav {
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .nav_list__item {
   height: 100%;
   width: 100%;
-  border: 2px solid var(--dark-color);
 }
 
 .nav_list__item__button {
-  display: block;
   height: 100%;
   width: 100%;
-  text-align: center;
-  padding: 11px 0;
+  border: 2px solid var(--dark-color);
   background-color: var(--brand-color);
 }
 
