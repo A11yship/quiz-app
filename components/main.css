@@ -7,3 +7,11 @@
 main {
   margin: 70px 0;
 }
+
+.page {
+  display: none;
+}
+
+.page--visible {
+  display: block;
+}
