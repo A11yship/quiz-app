@@ -11,7 +11,3 @@ main {
 .page {
   display: none;
 }
-
-.page--visible {
-  display: block;
-}

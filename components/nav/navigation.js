@@ -14,10 +14,22 @@ export default function Nav() {
   const profilePage = document.querySelector('[data-js="profile-page"]');
 
   const buttons = [homeButton, bookmarkButton, createButton, profileButton];
+  const pages = [homePage, bookmarkPage, createPage, profilePage];
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      console.log("Test");
+      pages.forEach((page) => {
+        page.classList.add("page");
+      });
+      if (button == homeButton) {
+        homePage.classList.remove("page");
+      } else if (button == bookmarkButton) {
+        bookmarkPage.classList.remove("page");
+      } else if (button == createButton) {
+        createPage.classList.remove("page");
+      } else {
+        profilePage.classList.remove("page");
+      }
     });
   });
 }
