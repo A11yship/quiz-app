@@ -21,23 +21,23 @@ export default function Nav() {
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       pages.forEach((page) => {
-        page.classList.add("page");
+        page.classList.add("page--hidden");
       });
       buttons.forEach((button) => {
         button.classList.remove("nav_list__item__button--current");
       });
       button.classList.add("nav_list__item__button--current");
       if (button == homeButton) {
-        homePage.classList.remove("page");
+        homePage.classList.remove("page--hidden");
         headline.innerText = "Quiz-App";
       } else if (button == bookmarkButton) {
-        bookmarkPage.classList.remove("page");
+        bookmarkPage.classList.remove("page--hidden");
         headline.innerText = "Lesezeichen";
       } else if (button == createButton) {
-        createPage.classList.remove("page");
+        createPage.classList.remove("page--hidden");
         headline.innerText = "Fragen erstellen";
       } else {
-        profilePage.classList.remove("page");
+        profilePage.classList.remove("page--hidden");
         headline.innerText = "Profil";
       }
     });

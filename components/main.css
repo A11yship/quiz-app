@@ -8,6 +8,6 @@ main {
   margin: 70px 0;
 }
 
-.page {
+.page--hidden {
   display: none;
 }
