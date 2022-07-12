@@ -26,5 +26,14 @@ nav {
 }
 
 .nav_list__item__button--current {
-  background-color: var(--dark-accent);
+  background-color: var(--dark-color);
+}
+
+.nav-icon {
+  height: 28px;
+  width: 28px;
+  fill: var(--light-color);
+}
+.nav-icon--current {
+  fill: var(--light-accent);
 }
