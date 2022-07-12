@@ -1,7 +1,7 @@
 import Bookmark from "../bookmark/bookmark.js";
 import Answer from "../answer/answer.js";
 
-const questions = [
+/*const questions = [
   {
     question: "Wie heißt die Hauptstadt von Deutschland?",
     answer: "Berlin",
@@ -17,7 +17,7 @@ const questions = [
     answer: "Rom",
     tags: ["Italien", "Geografie", "Hauptstädte"],
   },
-];
+];*/
 
 const maindiv = document.querySelector('[data-js="home-page"]');
 
