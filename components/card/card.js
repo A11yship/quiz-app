@@ -1,3 +1,6 @@
+import Bookmark from "../bookmark/bookmark.js";
+import Answer from "../answer/answer.js";
+
 const questions = [
   {
     question: "Wie heißt die Hauptstadt von Deutschland?",
@@ -30,11 +33,11 @@ export default function Card() {
     headline.classList.add("card_headline");
     card.append(headline);
 
-    const bookmark = document.createElement("button");
-    bookmark.classList.add("bookmark__button");
-    bookmark.type = "button";
-    bookmark.setAttribute("data-js", "bookmark-button");
-    card.append(bookmark);
+    const bookmarkButton = document.createElement("button");
+    bookmarkButton.classList.add("bookmark__button");
+    bookmarkButton.type = "button";
+    bookmarkButton.setAttribute("data-js", "bookmark-button");
+    card.append(bookmarkButton);
 
     const bookmarkSVG = document.createElementNS(
       "http://www.w3.org/2000/svg",
@@ -44,7 +47,7 @@ export default function Card() {
     bookmarkSVG.setAttribute("data-js", "bookmark-svg");
     bookmarkSVG.setAttribute("viewBox", "-2 -2 28 28");
     bookmarkSVG.setAttribute("alt", "Lesezeichen nicht gesetzt");
-    bookmark.append(bookmarkSVG);
+    bookmarkButton.append(bookmarkSVG);
 
     const bookmarkPath = document.createElementNS(
       "http://www.w3.org/2000/svg",
@@ -55,6 +58,7 @@ export default function Card() {
       "M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
     );
     bookmarkSVG.append(bookmarkPath);
+    Bookmark(bookmarkButton, bookmarkSVG);
 
     const questionText = document.createElement("p");
     questionText.innerText = question.question;
