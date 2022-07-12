@@ -7,3 +7,7 @@
 main {
   margin: 70px 0;
 }
+
+.page--hidden {
+  display: none;
+}

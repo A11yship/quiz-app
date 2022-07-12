@@ -16,14 +16,14 @@ const questions = [
   },
 ];
 
-const main = document.querySelector("main");
+const maindiv = document.querySelector('[data-js="home-page"]');
 
 export default function Card() {
   questions.forEach((question) => {
     const card = document.createElement("article");
     card.classList.add("card");
     card.setAttribute("data-js", "card");
-    main.append(card);
+    maindiv.append(card);
 
     const headline = document.createElement("h2");
     headline.innerText = "Frage";
