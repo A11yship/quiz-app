@@ -21,7 +21,7 @@ import Answer from "../answer/answer.js";
 
 const maindiv = document.querySelector('[data-js="home-page"]');
 
-export default function Card() {
+export default function Card(questions) {
   questions.forEach((question) => {
     const card = document.createElement("article");
     card.classList.add("card");
