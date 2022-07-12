@@ -5,14 +5,24 @@ export default async function LoadData() {
     const respone = await fetch("https://opentdb.com/api.php?amount=20");
     const data = await respone.json();
     const rawQuestionArray = data.results;
-    console.log(rawQuestionArray);
-    const questionArray = rawQuestionArray.map((item) => {
-      //console.log(item.question);
 
-      return { question: item.question, answer: "a", tags: ["a", "b", "c"] };
+    const questionArray = rawQuestionArray.map((item) => {
+      const tagList = [];
+      const categories = item.category
+        .split(/:|&/)
+        .map((category) => category.trim());
+
+      categories.forEach((category) => tagList.push(category));
+      tagList.push(item.difficulty);
+      tagList.push(item.type);
+
+      return {
+        question: item.question,
+        answer: item.correct_answer,
+        tags: tagList,
+      };
     });
 
-    console.log(questionArray);
     Card(questionArray);
   } catch (error) {
     console.error(error.message);
