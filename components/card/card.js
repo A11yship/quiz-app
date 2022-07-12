@@ -65,6 +65,13 @@ export default function Card(questions) {
     questionText.innerText = question.question;
     card.append(questionText);
 
+    if (question.answer_options.length > 0) {
+      const answerOptions = document.createElement("p");
+      answerOptions.innerText =
+        " The possible Answers are: " + question.answer_options.join(", ");
+      card.append(answerOptions);
+    }
+
     const answerButton = document.createElement("button");
     answerButton.classList.add("regular-button");
     answerButton.innerText = "Zeige Antwort";

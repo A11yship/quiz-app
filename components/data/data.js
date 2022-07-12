@@ -14,11 +14,23 @@ export default async function LoadData() {
 
       categories.forEach((category) => tagList.push(category));
       tagList.push(item.difficulty);
-      tagList.push(item.type);
+
+      if (item.type == "multiple") {
+        tagList.push("multiple choice");
+      } else {
+        tagList.push("True or false");
+      }
+
+      const answerOptions = [];
+      if (item.type == "multiple") {
+        answerOptions.push(item.correct_answer);
+        item.incorrect_answers.forEach((answer) => answerOptions.push(answer));
+      }
 
       return {
         question: item.question,
         answer: item.correct_answer,
+        answer_options: answerOptions,
         tags: tagList,
       };
     });
