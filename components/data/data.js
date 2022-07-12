@@ -30,7 +30,7 @@ export default async function LoadData() {
       return {
         question: item.question,
         answer: item.correct_answer,
-        answer_options: answerOptions,
+        answer_options: answerOptions.sort(),
         tags: tagList,
       };
     });
