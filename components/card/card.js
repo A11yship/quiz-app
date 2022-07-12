@@ -58,6 +58,7 @@ export default function Card() {
       "M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"
     );
     bookmarkSVG.append(bookmarkPath);
+
     Bookmark(bookmarkButton, bookmarkSVG);
 
     const questionText = document.createElement("p");
@@ -76,6 +77,8 @@ export default function Card() {
     answerText.classList.add("card_answer", "card_answer--hidden");
     answerText.setAttribute("data-js", "answer");
     card.append(answerText);
+
+    Answer(answerButton, answerText);
 
     const tagList = document.createElement("ul");
     tagList.classList.add("tag-list");
