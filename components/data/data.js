@@ -7,12 +7,9 @@ export default async function LoadData() {
     const rawQuestionArray = data.results;
 
     const questionArray = rawQuestionArray.map((item) => {
-      const tagList = [];
-      const categories = item.category
-        .split(/:|&/)
-        .map((category) => category.trim());
+      let tagList = [];
+      tagList = item.category.split(/:|&/).map((category) => category.trim());
 
-      categories.forEach((category) => tagList.push(category));
       tagList.push(item.difficulty);
 
       if (item.type == "multiple") {
