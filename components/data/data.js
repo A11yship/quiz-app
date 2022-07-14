@@ -6,6 +6,7 @@ export default async function LoadData() {
     const data = await respone.json();
     const rawQuestionArray = data.results;
 
+    //in Funktion auslagern
     const questionArray = rawQuestionArray.map((item) => {
       let tagList = [];
       tagList = item.category.split(/:|&/).map((category) => category.trim());
