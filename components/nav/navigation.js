@@ -18,34 +18,34 @@ export default function Nav() {
   const buttons = [homeButton, bookmarkButton, createButton, profileButton];
   const pages = [homePage, bookmarkPage, createPage, profilePage];
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      pages.forEach((page) => {
-        page.classList.add("page--hidden");
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      pages.forEach(page => {
+        page.classList.add('page--hidden');
       });
 
-      buttons.forEach((button) => {
-        button.classList.remove("nav_list__item__button--current");
+      buttons.forEach(button => {
+        button.classList.remove('nav_list__item__button--current');
         const navIcon = button.querySelector('[data-js="nav-icon"]');
-        navIcon.classList.remove("nav-icon--current");
+        navIcon.classList.remove('nav-icon--current');
       });
 
       const navIcon = button.querySelector('[data-js="nav-icon"]');
-      navIcon.classList.add("nav-icon--current");
-      button.classList.add("nav_list__item__button--current");
+      navIcon.classList.add('nav-icon--current');
+      button.classList.add('nav_list__item__button--current');
 
       if (button == homeButton) {
-        homePage.classList.remove("page--hidden");
-        headline.innerText = "Quiz-App";
+        homePage.classList.remove('page--hidden');
+        headline.innerText = 'Quiz-App';
       } else if (button == bookmarkButton) {
-        bookmarkPage.classList.remove("page--hidden");
-        headline.innerText = "Lesezeichen";
+        bookmarkPage.classList.remove('page--hidden');
+        headline.innerText = 'Lesezeichen';
       } else if (button == createButton) {
-        createPage.classList.remove("page--hidden");
-        headline.innerText = "Fragen erstellen";
+        createPage.classList.remove('page--hidden');
+        headline.innerText = 'Fragen erstellen';
       } else {
-        profilePage.classList.remove("page--hidden");
-        headline.innerText = "Profil";
+        profilePage.classList.remove('page--hidden');
+        headline.innerText = 'Profil';
       }
     });
   });
