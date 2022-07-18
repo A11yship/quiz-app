@@ -1,20 +1,20 @@
-import DecodeEntities from "./decodeEntities.js";
+import DecodeEntities from './decodeEntities.js';
 
 export default function PrepareDate(dataArray) {
-  return dataArray.map((item) => {
+  return dataArray.map(item => {
     const answerOptions = [];
-    if (item.type == "multiple") {
+    if (item.type == 'multiple') {
       answerOptions.push(DecodeEntities(item.correct_answer));
-      item.incorrect_answers.forEach((answer) => answerOptions.push(answer));
+      item.incorrect_answers.forEach(answer => answerOptions.push(answer));
     }
 
     let tagList = [];
-    tagList = item.category.split(/:|&/).map((category) => category.trim());
+    tagList = item.category.split(/:|&/).map(category => category.trim());
     tagList.push(item.difficulty);
-    if (item.type == "multiple") {
-      tagList.push("multiple choice");
+    if (item.type == 'multiple') {
+      tagList.push('multiple choice');
     } else {
-      tagList.push("True or false");
+      tagList.push('True or false');
     }
 
     return {
