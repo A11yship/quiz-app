@@ -19,14 +19,12 @@ import Answer from '../answer/answer.js';
   },
 ];*/
 
-const maindiv = document.querySelector('[data-js="home-page"]');
-
-export default function Card(questions) {
+export default function Card(questions, place) {
   questions.forEach(question => {
     const card = document.createElement('article');
     card.classList.add('card');
     card.setAttribute('data-js', 'card');
-    maindiv.append(card);
+    place.append(card);
 
     const headline = document.createElement('h2');
     headline.innerText = 'Frage';

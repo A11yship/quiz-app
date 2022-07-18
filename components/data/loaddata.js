@@ -9,7 +9,9 @@ export default async function LoadData() {
 
     const questionArray = PrepareDate(rawQuestionArray);
 
-    Card(questionArray);
+    const maindiv = document.querySelector('[data-js="home-page"]');
+
+    Card(questionArray, maindiv);
   } catch (error) {
     console.error(error.message);
   }
