@@ -1,7 +1,7 @@
 import Nav from './components/nav/navigation.js';
-import Card from './components/card/card.js';
+import LoadData from './components/data/loaddata.js';
 
 console.clear();
 
+LoadData();
 Nav();
-Card();

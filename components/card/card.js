@@ -1,7 +1,7 @@
 import Bookmark from '../bookmark/bookmark.js';
 import Answer from '../answer/answer.js';
 
-const questions = [
+/*const questions = [
   {
     question: 'Wie heißt die Hauptstadt von Deutschland?',
     answer: 'Berlin',
@@ -17,11 +17,11 @@ const questions = [
     answer: 'Rom',
     tags: ['Italien', 'Geografie', 'Hauptstädte'],
   },
-];
+];*/
 
 const maindiv = document.querySelector('[data-js="home-page"]');
 
-export default function Card() {
+export default function Card(questions) {
   questions.forEach(question => {
     const card = document.createElement('article');
     card.classList.add('card');
@@ -64,6 +64,13 @@ export default function Card() {
     const questionText = document.createElement('p');
     questionText.innerText = question.question;
     card.append(questionText);
+
+    if (question.answer_options.length > 0) {
+      const answerOptions = document.createElement('p');
+      answerOptions.innerText =
+        ' The possible Answers are: ' + question.answer_options.join(', ');
+      card.append(answerOptions);
+    }
 
     const answerButton = document.createElement('button');
     answerButton.classList.add('regular-button');
