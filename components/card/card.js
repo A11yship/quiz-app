@@ -59,7 +59,7 @@ export default function Card(questions) {
     );
     bookmarkSVG.append(bookmarkPath);
 
-    Bookmark(bookmarkButton, bookmarkSVG);
+    Bookmark(bookmarkButton, bookmarkSVG, question);
 
     const questionText = document.createElement('p');
     questionText.innerText = question.question;

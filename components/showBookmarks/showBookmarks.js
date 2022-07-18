@@ -1,1 +1,3 @@
-export default function ShowBookmarks() {}
+export default function ShowBookmarks() {
+  console.log('Test');
+}

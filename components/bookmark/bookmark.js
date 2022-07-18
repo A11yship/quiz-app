@@ -1,10 +1,8 @@
-export default function Bookmark(button, bookmark) {
-  let isBookmarked = false;
-
+export default function Bookmark(button, bookmark, card) {
   button.addEventListener('click', () => {
-    isBookmarked = !isBookmarked;
+    card.isBookmarked = !card.isBookmarked;
 
-    if (isBookmarked) {
+    if (card.isBookmarked) {
       bookmark.classList.add('bookmark__svg--filled');
       bookmark.setAttribute('alt', 'Lesezeichen gesetzt');
     } else {

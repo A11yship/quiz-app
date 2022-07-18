@@ -1,4 +1,4 @@
-import ShowBookmarks from '../showBookmarks/showBookmarks';
+import ShowBookmarks from '../showBookmarks/showBookmarks.js';
 
 export default function Nav() {
   const homeButton = document.querySelector('[data-js="nav-button-home"]');
