@@ -1,3 +1,5 @@
+import ShowBookmarks from '../showBookmarks/showBookmarks';
+
 export default function Nav() {
   const homeButton = document.querySelector('[data-js="nav-button-home"]');
   const bookmarkButton = document.querySelector(
@@ -40,6 +42,7 @@ export default function Nav() {
       } else if (button == bookmarkButton) {
         bookmarkPage.classList.remove('page--hidden');
         headline.innerText = 'Lesezeichen';
+        ShowBookmarks();
       } else if (button == createButton) {
         createPage.classList.remove('page--hidden');
         headline.innerText = 'Fragen erstellen';
