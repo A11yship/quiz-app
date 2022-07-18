@@ -1,8 +1,10 @@
+import DecodeEntities from "./decodeEntities.js";
+
 export default function PrepareDate(dataArray) {
   return dataArray.map((item) => {
     const answerOptions = [];
     if (item.type == "multiple") {
-      answerOptions.push(item.correct_answer);
+      answerOptions.push(DecodeEntities(item.correct_answer));
       item.incorrect_answers.forEach((answer) => answerOptions.push(answer));
     }
 
@@ -16,8 +18,8 @@ export default function PrepareDate(dataArray) {
     }
 
     return {
-      question: item.question,
-      answer: item.correct_answer,
+      question: DecodeEntities(item.question),
+      answer: DecodeEntities(item.correct_answer),
       answer_options: answerOptions.sort(),
       tags: tagList,
     };
